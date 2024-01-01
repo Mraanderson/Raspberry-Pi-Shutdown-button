@@ -29,3 +29,7 @@ GPIO.setup(channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.wait_for_edge(channel, GPIO.FALLING)
 
 os.system("sudo shutdown -h now")
+
+---
+
+Credit for the code will be added as they are discovered. I did not create the intial Python scripts.
