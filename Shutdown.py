@@ -1,9 +1,11 @@
-import RPi.GPIO as GPIO
+#!/usr/bin/env python3
+from gpiozero import Button
 import os
-channel=11
-GPIO.setmode(GPIO.BOARD)
-#Pin 11 & Gnd
 
-GPIO.setup(channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.wait_for_edge(channel, GPIO.FALLING)
-os.system("sudo shutdown -h now")
+#Button 17 = Pin 11+Gnd
+#Button 21 = Pin 40+Gnd
+#Button 3 = Pin 5+Gnd (also acts as a reset button to bring up again)
+
+Button(3).wait_for_press()
+#os.system("sudo poweroff")
+os.system("sudo reboot")
