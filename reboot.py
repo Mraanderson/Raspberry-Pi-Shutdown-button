@@ -1,4 +1,6 @@
 # Connect momentary switch to GPIO3 (AKA Pin 5) and GND
+# Not for Bookworm. Falling Edge removed.
+
 import RPi.GPIO as GPIO
 import os
 channel=5
